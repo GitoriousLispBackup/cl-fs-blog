@@ -1,6 +1,6 @@
 (in-package #:ihm-blog)
 
-(setq *default-template-pathname* #p"/home/ianmcorvidae/Source/ihm-blog/templates/")
+;(setq *default-template-pathname* #p"")
 
 (defun template->file (file template data)
  (with-open-file (stream file :direction :output :if-exists :supersede :if-does-not-exist :create)
@@ -15,4 +15,4 @@
 
 ;(setf *string-modifier* #'identity)
 
-(defun make-index () (template->file #P"result/index.html" #P"index.tpl" blog-data))
+(defun make-index () (template->file #P"result/index.html" #P"templates/index.html" blog-data))
