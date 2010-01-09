@@ -11,7 +11,7 @@
 (with-open-file (stream "templates-for-compilation.lisp")
   (defparameter *templates-for-compilation* (read stream)))
 
-(defun make-all ()
+(defun make-static ()
   "Loop through *TEMPLATES-FOR-COMPILATION* and then TEMPLATE->FILE on each (assuming templates in templates/ and output to same filenames in result/"
   (dolist (template *templates-for-compilation*)
     (template->file (merge-pathnames template #P"result/") 
