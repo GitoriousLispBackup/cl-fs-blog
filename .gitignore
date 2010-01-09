@@ -1,1 +1,3 @@
 *.fasl
+data.lisp
+templates-for-compilation.lisp
