@@ -1,18 +1,19 @@
 (in-package #:ihm-blog)
 
-;(setq *default-template-pathname* #p"")
-
 (defun template->file (file template data)
- (with-open-file (stream file :direction :output :if-exists :supersede :if-does-not-exist :create)
+  "Fill the given TEMPLATE by the given DATA; output to FILE"
+  (with-open-file (stream file :direction :output :if-exists :supersede :if-does-not-exist :create)
    (fill-and-print-template template data :stream stream)))
 
-(defparameter blog-data 
-  '(:head-title "Ian McEwen's Blog"
-    :blog-title "Ian McEwen's Blog"
-    :stylesheet "style.css"
-    :blog-posts ((:post-title "Test post one" :post-text "Here is the first test post")
-		 (:post-title "Test post two" :post-text "Here is the second"))))
+(with-open-file (stream "data.lisp")
+  (defparameter *blog-data* (read stream)))
+  
+(with-open-file (stream "templates-for-compilation.lisp")
+  (defparameter *templates-for-compilation* (read stream)))
 
-;(setf *string-modifier* #'identity)
-
-(defun make-index () (template->file #P"result/index.html" #P"templates/index.html" blog-data))
+(defun make-all ()
+  "Loop through *TEMPLATES-FOR-COMPILATION* and then TEMPLATE->FILE on each (assuming templates in templates/ and output to same filenames in result/"
+  (dolist (template *templates-for-compilation*)
+    (template->file (merge-pathnames template #P"result/") 
+		    (merge-pathnames template #P"templates/") 
+		    *blog-data*)))
