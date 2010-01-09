@@ -1,4 +1,4 @@
-(in-package #:ihm-blog)
+(in-package #:cl-fs-blog)
 
 (defun template->file (file template data)
   "Fill the given TEMPLATE by the given DATA; output to FILE"
