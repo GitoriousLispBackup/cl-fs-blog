@@ -17,3 +17,11 @@
     (template->file (merge-pathnames template #P"result/") 
 		    (merge-pathnames template #P"templates/") 
 		    *blog-data*)))
+
+(defun make-dynamic ()
+  "Loop through :BLOG-POSTS in *BLOG-DATA* and create pages"
+  (dolist (post (getf *blog-data* :blog-posts))
+    (template->file 
+     (merge-pathnames (substitute #\- #\Space (getf post :post-title)) #P"result/posts/")
+     #P"templates/blog-post.html"
+     (append *blog-data* post))))
