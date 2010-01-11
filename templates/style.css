@@ -1,1 +1,36 @@
-body {background-color: <!-- TMPL_VAR body-background-color -->}
+body {
+    <!-- TMPL_IF body-background-color --> background-color: <!-- TMPL_VAR body-background-color -->; <!-- /TMPL_IF -->
+    <!-- TMPL_IF body-background-image --> background-image: <!-- TMPL_VAR body-background-image -->; <!-- /TMPL_IF -->
+    <!-- TMPL_IF body-background-position --> background-position: <!-- TMPL_VAR body-background-position -->; <!-- /TMPL_IF -->
+    <!-- TMPL_IF body-background-repeat --> background-repeat: <!-- TMPL_VAR body-background-repeat -->; <!-- /TMPL_IF -->
+    <!-- TMPL_IF body-background-attachment --> background-attachment: <!-- TMPL_VAR body-background-attachment -->; <!-- /TMPL_IF -->
+    <!-- TMPL_IF body-color --> color: <!-- TMPL_VAR body-color -->; <!-- /TMPL_IF -->
+    <!-- TMPL_IF body-margin-top --> margin-top: <!-- TMPL_VAR body-margin-top -->; <!-- /TMPL_IF -->
+    <!-- TMPL_IF body-margin-bottom --> margin-bottom: <!-- TMPL_VAR body-margin-bottom -->; <!-- /TMPL_IF -->
+    <!-- TMPL_IF body-margin-left --> margin-left: <!-- TMPL_VAR body-margin-left -->; <!-- /TMPL_IF -->
+    <!-- TMPL_IF body-margin-right --> margin-right: <!-- TMPL_VAR body-margin-right -->; <!-- /TMPL_IF -->
+    <!-- TMPL_IF body-font-family --> font-family: <!-- TMPL_VAR body-font-family -->; <!-- /TMPL_IF -->
+    <!-- TMPL_IF body-font-size --> font-size: <!-- TMPL_VAR body-font-size -->; <!-- /TMPL_IF -->
+}
+h1 {
+}
+h2 {
+}
+p {
+}
+a {
+}
+#blog-title {
+}
+.post-title {
+}
+.post-text {
+}
+#individual-post-title {
+}
+#individual-post-date {
+}
+.individual-post-text {
+}
+#footer-text {
+}

@@ -11,8 +11,11 @@
     :blog-posts ((:post-title "Test post one" 
 			      :post-text "Here is the first test post" 
 			      :post-description "First post"
-			      :post-date "2009-10-25T19:20Z" 
-			      :post-url "http://example.com/2009/10/25/Test-post-one.html"
+			      :post-year "2009" 
+			      :post-month "10"
+			      :post-day "25"
+			      :post-time "19:20 EST"
+			      :post-url "posts/2009/10/25/Test-post-one.html"
 			      ;:dc-source "" ; attributing for CC, especially
 			      ;:dc-post-creator "" ; for multi-author blogs, do by post
 			      ;:foaf-post-maker "" ; same dualism as above (preferred option)
@@ -21,8 +24,11 @@
 		 (:post-title "Test post two" 
 			      :post-text "Here is the second" 
 			      :post-description "Second post"
-			      :post-date "2010-01-09T07:41Z" 
-			      :post-url "http://example.com/2010/01/09/Test-post-two.html"))
+			      :post-year "2010" 
+			      :post-month "01"
+			      :post-day "09"
+			      :post-time "07:41 EST"
+			      :post-url "posts/2010/01/09/Test-post-two.html"))
 
     ;; RSS-specific options ;;
     ;:rss-image-url ""
@@ -36,4 +42,16 @@
 
     ;; Stylesheet ;;
     :stylesheet "style.css"
-    :body-background-color "#FFFFF0")
+    :body-background-color "#DDDDE0"
+    ;:body-background-image ""
+    ;:body-background-position ""
+    ;:body-background-repeat ""
+    ;:body-background-attachment ""
+    ;:body-color ""
+    ;:body-margin-top ""
+    ;:body-margin-bottom ""
+    ;:body-margin-left ""
+    ;:body-margin-right ""
+    ;:body-font-family ""
+    ;:body-font-size ""
+    )
