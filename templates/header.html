@@ -1,7 +1,16 @@
-<html <!-- TMPL_VAR html-options -->>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+	  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:dcterms="http://purl.org/dc/terms/"
+      xmlns:sioc="http://rdfs.org/sioc/ns#"
+      version="XHTML+RDFa 1.0" xml:lang="<!-- TMPL_VAR xml-language -->"
+    <!-- TMPL_VAR html-options -->>
 	<head>
 		<title><!-- TMPL_VAR head-title --></title>
-		<link rel="stylesheet" href="<!-- TMPL_VAR blog-link --><!-- TMPL_VAR stylesheet -->" type="text/css">
+		<link rel="stylesheet" href="<!-- TMPL_VAR blog-link --><!-- TMPL_VAR stylesheet -->" type="text/css" />
+		<meta property="dcterms:creator" content="<!-- TMPL_VAR dc-creator -->" />
 		<!-- TMPL_VAR other-head-items -->
 	</head>
 	<body <!-- TMPL_VAR body-options -->>

@@ -1,6 +1,7 @@
 (:head-title "Example Blog"
     :blog-title "Example Blog"
     :blog-link "http://example.com/"
+    :xml-language "en"
     
     ;; Identifying the author ;;
     ;:dc-creator "" ; string, as by standard DC/FOAF suggestion
@@ -14,7 +15,7 @@
 			      :post-year "2009" 
 			      :post-month "10"
 			      :post-day "25"
-			      :post-time "19:20 EST"
+			      :post-time "19:20:00-5:00"
 			      :post-url "posts/2009/10/25/Test-post-one.html"
 			      ;:dc-source "" ; attributing for CC, especially
 			      ;:dc-post-creator "" ; for multi-author blogs, do by post
@@ -27,7 +28,7 @@
 			      :post-year "2010" 
 			      :post-month "01"
 			      :post-day "09"
-			      :post-time "07:41 EST"
+			      :post-time "07:41:00-5:00"
 			      :post-url "posts/2010/01/09/Test-post-two.html"))
 
     ;; RSS-specific options ;;
