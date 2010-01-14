@@ -1,10 +1,14 @@
 <!-- TMPL_LOOP blog-posts -->
-<div class="individual-post" typeof="sioc:Post" about="<!-- TMPL_VAR blog-link --><!-- TMPL_VAR post-url -->">
-<h2 class="post-title" property="dcterms:title"><!-- TMPL_VAR post-title --></h2>
-<span property="sioc:has_container" content="<!-- TMPL_VAR blog-link -->">
-<span class="post-author" property="dcterms:creator"><!-- TMPL_IF dc-post-creator --><!-- TMPL_VAR dc-post-creator --><!-- TMPL_ELSE --><!-- TMPL_VAR dc-creator --><!-- /TMPL_IF --></span>&nbsp;
-<span class="post-date" property="dcterms:date" content="<!-- TMPL_VAR post-year -->-<!-- TMPL_VAR post-month -->-<!-- TMPL_VAR post-day -->T<!-- TMPL_VAR post-time -->"><!-- TMPL_VAR post-year -->-<!-- TMPL_VAR post-month -->-<!-- TMPL_VAR post-day --> <!-- TMPL_VAR post-time --></span>
-<p class="post-text" property="dcterms:description" content="<!-- TMPL_VAR post-description -->"><!-- TMPL_VAR post-text --></p>
-<a class="post-permalink" href="<!-- TMPL_VAR post-url -->">Permalink</a>
+<div class="post-in-listing" typeof="sioc:Post" about="<!-- TMPL_VAR blog-link --><!-- TMPL_VAR post-url -->">
+  <h2 class="post-title" property="dcterms:title"><!-- TMPL_VAR post-title --></h2>
+  <span property="sioc:has_container" content="<!-- TMPL_VAR blog-link -->"></span>
+  <span class="post-author" property="dcterms:creator"><!-- TMPL_IF dc-post-creator --><!-- TMPL_VAR dc-post-creator --><!-- TMPL_ELSE --><!-- TMPL_VAR dc-creator --><!-- /TMPL_IF --></span>&nbsp;
+  <span class="post-date" property="dcterms:date" content="<!-- TMPL_VAR post-year -->-<!-- TMPL_VAR post-month -->-<!-- TMPL_VAR post-day -->T<!-- TMPL_VAR post-time -->">
+    <!-- TMPL_VAR post-year -->-<!-- TMPL_VAR post-month -->-<!-- TMPL_VAR post-day --> <!-- TMPL_VAR post-time -->
+  </span>
+  <p class="post-text" property="dcterms:description" content="<!-- TMPL_VAR post-description -->">
+    <!-- TMPL_VAR post-text -->
+  </p>
+  <a class="post-permalink" href="<!-- TMPL_VAR post-url -->">Permalink</a>
 </div>
 <!-- /TMPL_LOOP -->
