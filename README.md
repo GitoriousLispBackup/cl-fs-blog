@@ -10,7 +10,7 @@ To try it out:
 + Copy templates-for-compilation-example.lisp to templates-for-compilation.lisp
 + Poke around. 
 
-Function MAKE-STATIC will make everything that's explicitly listed in templates-for-compilation.lisp. Function MAKE-DYNAMIC will make pages for individual blog posts. At the moment, neither does much that's terribly interesting.
+Function MAKE-STATIC will make everything that's explicitly listed in templates-for-compilation.lisp. Function MAKE-BLOG-POSTS will make pages for individual blog posts.
 
 TODO
 ====

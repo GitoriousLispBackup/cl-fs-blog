@@ -19,8 +19,8 @@
 		    (merge-pathnames template #P"templates/") 
 		    blog-data)))
 
-(defun make-dynamic (&optional (blog-data *blog-data*))
-  "Loop through :BLOG-POSTS in *BLOG-DATA* (or configurable alternate) and create pages"
+(defun make-blog-posts (&optional (blog-data *blog-data*))
+  "Loop through :BLOG-POSTS in *BLOG-DATA* (or configurable alternate) and create blog-post pages"
   (dolist (post (getf blog-data :blog-posts))
     (template->file 
      (merge-pathnames 
