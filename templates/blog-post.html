@@ -1,6 +1,7 @@
 <!-- TMPL_INCLUDE 'templates/header.html' -->
+<h1 id="blog-title"><!-- TMPL_VAR blog-title --></h1>
 <div class="individual-post" typeof="sioc:Post" about="<!-- TMPL_VAR blog-link --><!-- TMPL_VAR post-url -->">
-  <h1 class="post-title" property="dcterms:title"><!-- TMPL_VAR post-title --></h1>
+  <h2 class="post-title" property="dcterms:title"><!-- TMPL_VAR post-title --></h2>
   <span property="sioc:has_container" content="<!-- TMPL_VAR blog-link -->"></span>
   <span property="cc:attributionName" content="<!-- TMPL_IF cc-attribution-name --><!-- TMPL_VAR cc-attribution-name --><!-- TMPL_ELSE --><!-- TMPL_IF dc-post-creator --><!-- TMPL_VAR dc-post-creator --><!-- TMPL_ELSE --><!-- TMPL_VAR dc-creator --><!-- /TMPL_IF --><!-- /TMPL_IF -->"></span>
   By <span class="post-author" property="dcterms:creator"><!-- TMPL_IF dc-post-creator --><!-- TMPL_VAR dc-post-creator --><!-- TMPL_ELSE --><!-- TMPL_VAR dc-creator --><!-- /TMPL_IF --></span><br />
