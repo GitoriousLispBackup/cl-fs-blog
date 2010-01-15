@@ -26,12 +26,7 @@
   (dolist (post (getf blog-data :blog-posts))
     (template->file 
      (merge-pathnames 
-      (concatenate 'string
-       (getf post :post-year) "/"
-       (getf post :post-month) "/"
-       (getf post :post-day) "/"
-       (substitute #\- #\Space (getf post :post-title))
-       ".html") 
-      #P"result/posts/")
+       (getf post :post-url)
+      #P"result/")
      #P"templates/blog-post.html"
      (append blog-data post))))
