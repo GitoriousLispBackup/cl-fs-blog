@@ -12,6 +12,8 @@
 (with-open-file (stream "templates-for-compilation.lisp")
   (defparameter *templates-for-compilation* (read stream)))
 
+(setf *string-modifier* #'cl:identity)
+
 (defun make-static (&optional (templates-for-compilation *templates-for-compilation*) (blog-data *blog-data*))
   "Loop through *TEMPLATES-FOR-COMPILATION* (or configurable alternate) and then TEMPLATE->FILE on each with *BLOG-DATA* (or configurable alternate) (assuming templates in templates/ and output to same filenames in result/"
   (dolist (template templates-for-compilation)

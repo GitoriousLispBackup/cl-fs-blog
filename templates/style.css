@@ -12,15 +12,52 @@ body {
     <!-- TMPL_IF body-font-family --> font-family: <!-- TMPL_VAR body-font-family -->; <!-- /TMPL_IF -->
     <!-- TMPL_IF body-font-size --> font-size: <!-- TMPL_VAR body-font-size -->; <!-- /TMPL_IF -->
 }
+div.blog-posts, div.individual-post {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid rgb(153, 50, 204);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+div.individual-post { padding: 10px; }
+div.post-in-listing {
+    text-align: left;
+    margin: 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid rgb(153, 50, 204);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
 h1 {
+    text-align: center;
+    font-size: 24px;
 }
 h2 {
+    text-align: center;
+    font-size: 18px;
+    line-height: 20px;
 }
 p {
 }
 a {
 }
 #blog-title {
+    text-align: center;
+    font-variant: small-caps;
+}
+.post-permalink {
+    float: left;
+}
+.license-link {
+    float: right;
+}
+div.assorted-links {
+    height: 30px;
+    text-align: center;
 }
 .post-title {
 }

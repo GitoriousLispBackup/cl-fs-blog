@@ -1,5 +1,18 @@
 <!-- TMPL_INCLUDE 'templates/header.html' -->
-<h1 id="individual-post-title"><!-- TMPL_VAR post-title --></h1>
-<h2 id="individual-post-date"><!-- TMPL_VAR post-year -->-<!-- TMPL_VAR post-month -->-<!-- TMPL_VAR post-day --> <!-- TMPL_VAR post-time --></h2>
-<p class="individual-post-text"><!-- TMPL_VAR post-text --></p>
+<div class="individual-post" typeof="sioc:Post" about="<!-- TMPL_VAR blog-link --><!-- TMPL_VAR post-url -->">
+  <h1 class="post-title" property="dcterms:title"><!-- TMPL_VAR post-title --></h1>
+  <span property="sioc:has_container" content="<!-- TMPL_VAR blog-link -->"></span>
+  <span property="cc:attributionName" content="<!-- TMPL_IF cc-attribution-name --><!-- TMPL_VAR cc-attribution-name --><!-- TMPL_ELSE --><!-- TMPL_IF dc-post-creator --><!-- TMPL_VAR dc-post-creator --><!-- TMPL_ELSE --><!-- TMPL_VAR dc-creator --><!-- /TMPL_IF --><!-- /TMPL_IF -->"></span>
+  By <span class="post-author" property="dcterms:creator"><!-- TMPL_IF dc-post-creator --><!-- TMPL_VAR dc-post-creator --><!-- TMPL_ELSE --><!-- TMPL_VAR dc-creator --><!-- /TMPL_IF --></span><br />
+  Published <span class="post-date" property="dcterms:date" content="<!-- TMPL_VAR post-year -->-<!-- TMPL_VAR post-month -->-<!-- TMPL_VAR post-day -->T<!-- TMPL_VAR post-time -->">
+    <!-- TMPL_VAR post-year -->-<!-- TMPL_VAR post-month -->-<!-- TMPL_VAR post-day --> <!-- TMPL_VAR post-time -->
+  </span>
+  <div class="post-text" property="dcterms:description" content="<!-- TMPL_VAR post-description -->">
+    <!-- TMPL_VAR post-text -->
+  </div>
+  <div class="assorted-links">
+    <a class="post-permalink" rel="cc:attributionURL" href="<!-- TMPL_VAR blog-link --><!-- TMPL_VAR post-url -->">Permalink</a>
+    <a class="homepage-navigation-link" rel="sioc:has_container" href="<!-- TMPL_VAR blog-link -->index.html">Home</a>
+    <a class="license-link" rel="license" href="<!-- TMPL_VAR license-uri -->"><img alt="Creative Commons License" style="border-width:0" src="<!-- TMPL_VAR license-image -->" /></a></div>
+</div>
 <!-- TMPL_INCLUDE 'templates/footer.html' -->
