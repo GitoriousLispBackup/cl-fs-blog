@@ -42,6 +42,10 @@
     ;:cc-attribution-name "" ;; for being really specific?
     ;;:cc-more-permissions ""
 
+    ;; OpenID ;;
+    ;:openid-server ""
+    ;:openid-delegate ""
+
     ;; Stylesheet ;;
     :stylesheet "style.css"
     :body-background-color "#DDDDE0"
