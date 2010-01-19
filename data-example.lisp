@@ -60,4 +60,8 @@
     ;:body-margin-right ""
     :body-font-family "Helvetica, sans-serif"
     :body-font-size "13px"
+    :outside-div-width "700px"
+    :outside-div-border-color "rgb(153, 50, 204)"
+    :inside-div-background-color "#DDDDE0"
+    :inside-div-border-color "rgb(153, 50, 204)"
     )
